@@ -1,12 +1,12 @@
 import "./episodes.css";
 
 /** A list of episode names that allows the user to select an episode */
-export default function EpisodeList({
+const EpisodeList = ({
   name,
   episodes,
   selectedEpisode,
   setSelectedEpisode,
-}) {
+}) => {
   return (
     <section className="episodes">
       <h2>{name}</h2>
@@ -23,4 +23,6 @@ export default function EpisodeList({
       </ol>
     </section>
   );
-}
+};
+
+export default EpisodeList;

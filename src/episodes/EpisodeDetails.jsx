@@ -1,7 +1,7 @@
 import "./episodes.css";
 
 /** Details about the selected episode */
-export default function EpisodeDetails({ episode }) {
+const EpisodeDetails = ({ episode }) => {
   if (!episode) {
     return (
       <section className="episode-details">
@@ -19,4 +19,6 @@ export default function EpisodeDetails({ episode }) {
       <button>Watch now</button>
     </section>
   );
-}
+};
+
+export default EpisodeDetails;
