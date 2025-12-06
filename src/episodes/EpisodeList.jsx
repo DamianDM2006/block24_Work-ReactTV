@@ -23,6 +23,7 @@ const EpisodeList = ({
       </ol>
     </section>
   );
+    
 };
 
 export default EpisodeList;
