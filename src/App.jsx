@@ -3,6 +3,7 @@ import EpisodeList from "./episodes/EpisodeList.jsx";
 import EpisodeDetails from "./episodes/EpisodeDetails.jsx";
 import { tvShows } from "./shows/data.js";
 import ShowSelection from "./shows/ShowSelection.jsx";
+import ShowDetails from "./shows/ShowDetails.jsx";
 /**
  * React TV is an web streaming platform that allows users to browse
  * through the episodes of a variety of different shows.
@@ -11,8 +12,7 @@ const App = () => {
   // const [tvShows, setTvShows] = useState([]);
   const [selectedShow, setSelectedShow] = useState([]);
   
-  console.log({tvShows});
-
+console.log(selectedShow);
 
 
   return (
@@ -26,6 +26,7 @@ const App = () => {
           setSelectedShow={setSelectedShow}
           selectedShow={selectedShow}
         />
+        <EpisodeList /> 
       </main>
     </>
   );

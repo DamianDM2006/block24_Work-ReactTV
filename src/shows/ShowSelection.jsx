@@ -5,10 +5,10 @@ const ShowSelection = ({ tvShows, selectedShow, setSelectedShow }) => {
   
   return (
     <nav className="shows">
-      <ol>
+      <ul>
         {tvShows.map((show) => (
           <li
-            // key={show.name}
+            key={show.name}
             onClick={() => setSelectedShow(show)}
             className={show === selectedShow ? "selected" : ""}
           >
@@ -17,7 +17,7 @@ const ShowSelection = ({ tvShows, selectedShow, setSelectedShow }) => {
           )
           )
         }
-      </ol>
+      </ul>
     </nav>
   );
 };
