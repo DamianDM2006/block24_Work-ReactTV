@@ -6,10 +6,14 @@ import ShowSelection from "./shows/ShowSelection.jsx";
 /**
  * React TV is an web streaming platform that allows users to browse
  * through the episodes of a variety of different shows.
- */
+*/
 const App = () => {
-  const [selectedEpisode, setSelectedEpisode] = useState([]);
+  // const [tvShows, setTvShows] = useState([]);
+  const [selectedShow, setSelectedShow] = useState([]);
   
+  console.log({tvShows});
+
+
 
   return (
     <>
@@ -17,7 +21,11 @@ const App = () => {
         <p>React TV</p>
       </header>
       <main>
-        <ShowSelection />
+        <ShowSelection 
+          tvShows={tvShows}
+          setSelectedShow={setSelectedShow}
+          selectedShow={selectedShow}
+        />
       </main>
     </>
   );
