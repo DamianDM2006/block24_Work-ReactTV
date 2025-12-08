@@ -17,7 +17,7 @@ const EpisodeList = ({
             onClick={() => setSelectedEpisode(episode)}
             className={episode === selectedEpisode ? "selected" : ""}
           >
-            {episode.title}
+            Title:  {episode.title}
           </li>
         ))}
       </ol>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import EpisodeList from "./episodes/EpisodeList.jsx";
+
 import EpisodeDetails from "./episodes/EpisodeDetails.jsx";
 import { tvShows } from "./shows/data.js";
 import ShowSelection from "./shows/ShowSelection.jsx";
@@ -11,7 +11,8 @@ import ShowDetails from "./shows/ShowDetails.jsx";
 const App = () => {
   // const [tvShows, setTvShows] = useState([]);
   const [selectedShow, setSelectedShow] = useState([]);
-  
+  const [selectedEpisode, setSelectedEpisode] = useState([selectedShow.episodes]);
+  const episodes = selectedShow.episodes;
 console.log(selectedShow);
 
 
@@ -26,7 +27,7 @@ console.log(selectedShow);
           setSelectedShow={setSelectedShow}
           selectedShow={selectedShow}
         />
-        <EpisodeList /> 
+        <ShowDetails selectedShow={selectedShow}/> 
       </main>
     </>
   );

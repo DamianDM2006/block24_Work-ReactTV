@@ -1,8 +1,9 @@
 import "./shows.css";
+import EpisodeList from "../episodes/EpisodeList";
 
 /** Allows users to browse through the episodes of the given show */
 const ShowDetails = ({selectedShow}) => {
-  const episodes = selectedShow.episodes;
+  console.log(selectedShow);
   if (selectedShow.length === 0) {
     return (
       <section className="show-details">
@@ -11,24 +12,13 @@ const ShowDetails = ({selectedShow}) => {
       </section>
     )
   }
-
+  
   return (
-    <section className="show-details">
-      <h3>{selectedShow.name}</h3>
-      <p>Genre:  {selectedShow.genre}</p>
-        <ol>
-          {episodes.map((episode) => (
-            <li
-              key={episode.number}
-            >
-              {episode.title}
-            </li>
-          ))}
-        </ol>
+    <section className="show">
+      <h2>{selectedShow.name}</h2>
+       <EpisodeList episodes={selectedShow.episodes}/>
     </section>
   )
-
-  return <div className="show-details"></div>;
 }
 
 export default ShowDetails;
