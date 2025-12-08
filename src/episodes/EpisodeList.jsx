@@ -7,12 +7,11 @@ const EpisodeList = ({
   selectedEpisode,
   setSelectedEpisode,
 }) => {
-  console.log(`selected episode`, selectedEpisode);
   return (
     <section className="episodes">
       <h2>{name}</h2>
       <ol>
-        <h3>Titles:  </h3>
+        <h3>Titles: </h3>
         {episodes.map((episode) => (
           <li
             key={episode.number}
@@ -25,7 +24,6 @@ const EpisodeList = ({
       </ol>
     </section>
   );
-    
 };
 
 export default EpisodeList;

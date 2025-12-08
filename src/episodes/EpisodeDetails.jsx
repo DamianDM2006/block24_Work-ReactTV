@@ -10,7 +10,6 @@ const EpisodeDetails = ({ episode }) => {
       </section>
     );
   }
-
   return (
     <section className="episode-details">
       <h2>Episode {episode.number}</h2>

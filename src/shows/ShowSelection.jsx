@@ -2,7 +2,6 @@ import "./shows.css";
 
 /** A navbar that allows users to choose between a list of shows */
 const ShowSelection = ({ tvShows, selectedShow, setSelectedShow }) => {
-  
   return (
     <nav className="shows">
       <ul>
@@ -14,9 +13,7 @@ const ShowSelection = ({ tvShows, selectedShow, setSelectedShow }) => {
           >
             {show.name}
           </li>
-          )
-          )
-        }
+        ))}
       </ul>
     </nav>
   );
