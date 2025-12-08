@@ -11,9 +11,8 @@ import ShowDetails from "./shows/ShowDetails.jsx";
 const App = () => {
   // const [tvShows, setTvShows] = useState([]);
   const [selectedShow, setSelectedShow] = useState([]);
-  const [selectedEpisode, setSelectedEpisode] = useState([selectedShow.episodes]);
+  const [selectedEpisode, setSelectedEpisode] = useState([]);
   const episodes = selectedShow.episodes;
-console.log(selectedShow);
 
 
   return (
@@ -28,9 +27,11 @@ console.log(selectedShow);
           selectedShow={selectedShow}
         />
         <ShowDetails selectedShow={selectedShow}/> 
+        
+        
       </main>
     </>
-  );
+  )
 }
 
 export default App;

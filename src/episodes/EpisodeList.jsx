@@ -7,6 +7,7 @@ const EpisodeList = ({
   selectedEpisode,
   setSelectedEpisode,
 }) => {
+  console.log(`selected episode`, selectedEpisode);
   return (
     <section className="episodes">
       <h2>{name}</h2>
