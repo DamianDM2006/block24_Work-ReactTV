@@ -15,7 +15,8 @@ const ShowDetails = ({selectedShow}) => {
   
   return (
     <section className="show">
-      <h2>{selectedShow.name}</h2>
+      <h2>{selectedShow.name} </h2>
+      <p>{selectedShow.genre} series</p>
        <EpisodeList episodes={selectedShow.episodes}/>
     </section>
   )

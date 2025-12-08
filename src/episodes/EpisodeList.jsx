@@ -11,13 +11,14 @@ const EpisodeList = ({
     <section className="episodes">
       <h2>{name}</h2>
       <ol>
+        <h3>Titles:  </h3>
         {episodes.map((episode) => (
           <li
             key={episode.number}
             onClick={() => setSelectedEpisode(episode)}
             className={episode === selectedEpisode ? "selected" : ""}
           >
-            Title:  {episode.title}
+            {episode.title}
           </li>
         ))}
       </ol>
