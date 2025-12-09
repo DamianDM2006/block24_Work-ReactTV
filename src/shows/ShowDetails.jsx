@@ -11,8 +11,9 @@ const ShowDetails = ({
   episode,
 }) => {
 
-  const [selectedEpisode, setSelectedEpisode] = useState([]);
+  const [selectedEpisode, setSelectedEpisode] = useState();
   console.log(selectedEpisode);
+  console.log(episode);
 
   if (selectedShow.length === 0) {
     return (
@@ -27,8 +28,14 @@ const ShowDetails = ({
     <section className="show">
       <h2>{selectedShow.name} </h2>
       <p>{selectedShow.genre} series</p>
-      <EpisodeList episodes={selectedShow.episodes} />
-      <EpisodeDetails episode={episode}/>
+      <EpisodeList
+        episodes={selectedShow.episodes}
+        selectedEpisode={selectedEpisode}
+        setSelectedEpisode={setSelectedEpisode}
+      />
+      <EpisodeDetails
+        episode={selectedEpisode}
+      />
     </section>
   );
 };

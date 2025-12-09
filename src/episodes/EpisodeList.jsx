@@ -2,14 +2,12 @@ import "./episodes.css";
 
 /** A list of episode names that allows the user to select an episode */
 const EpisodeList = ({
-  name,
   episodes,
   selectedEpisode,
   setSelectedEpisode,
 }) => {
   return (
-    <section className="episodes">
-      <h2>{name}</h2>
+    <nav className="episodes">
       <ol>
         <h3>Titles: </h3>
         {episodes.map((episode) => (
@@ -18,11 +16,11 @@ const EpisodeList = ({
             onClick={() => setSelectedEpisode(episode)}
             className={episode === selectedEpisode ? "selected" : ""}
           >
-            {episode.title}
+            {episode.number}:  {episode.title}
           </li>
         ))}
       </ol>
-    </section>
+    </nav>
   );
 };
 
